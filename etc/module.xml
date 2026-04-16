@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Rameera_Payment
+ *
+ * @category  Rameera
+ * @package   Rameera/Payment
+ * @description Two Config field to save time threshold and retry attempt
+ * @author    Rameera <arjundhiman90@gmail.com>
+ * @copyright 2024 Rameera
+ * @license   MIT
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Rameera_Payment">
+        <sequence>
+            <module name="Magento_Payment"/>
+            <module name="Magento_PaymentGraphQl"/>
+            <module name="Adyen_Payment"/>
+            <module name="Magento_SalesGraphQl"/>
+        </sequence>
+    </module>
+</config>

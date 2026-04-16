@@ -1,0 +1,115 @@
+type Mutation {
+    paymentRetry(input: PaymentRetryInput): PaymentRetryOutput
+    @resolver(
+      class: "\\Hudson\\Payment\\Model\\Resolver\\PaymentRetry"
+    )
+    @doc(description: "Payment Retry of Order")
+
+    orderPayment(input: OrderPaymentInput): OrderPaymentOutput
+    @resolver(
+      class: "\\Hudson\\Payment\\Model\\Resolver\\OrderPayment"
+    )
+    @doc(description: "Set Order Payment")
+
+    cartReset(input: CartResetInput): CartResetOutput
+    @resolver(
+      class: "\\Hudson\\Payment\\Model\\Resolver\\CartReset"
+    )
+    @doc(description: "Activate and Deactivate Cart")
+
+    setPaymentMethodOnRetry(input: PaymentMethodOnRetryInput): PaymentMethodOnRetryOutput
+    @resolver(
+      class: "\\Hudson\\Payment\\Model\\Resolver\\SetPaymentMethodOnRetry"
+    )
+    @doc(description: "Set Order Payment Method on Retry")
+}
+
+type Query {
+    salesOrder (
+        id: String @doc(description: "Id of the Sales Order")
+    ): SalesOrder @resolver(class: "Hudson\\Payment\\Model\\Resolver\\SalesOrder") @doc(description: "The Sales Order query returns information about a Sales order")
+}
+
+
+type PaymentRetryOutput @doc(description: "Return Burst Time and Available Retry Attempt"){
+    code: Int @doc(description: "Status Code of Payment Retry")
+    status: String @doc(description: "Status of Payment Retry")
+    burstTime: Int @doc(description: "Burst Time of Payment Retry")
+    availableRetryAttempt: Int @doc(description: "Available retry Attempt of Payment Retry")
+    message: String @doc(description: "Success or Failed message of Payment Retry")
+}
+
+input PaymentRetryInput {
+      orderId: String @doc(description: "Order Increment ID")
+        paymentSuccess: String @doc(description: "Payment Status")
+        payResponse: String @doc(description: "Payment Response")
+}
+
+type OrderPaymentOutput @doc(description: "Output of order payment"){
+  status: String @doc(description: "Status of Payment response")
+}
+
+input OrderPaymentInput {
+  order_id: String @doc(description: "Order ID of order")
+  pay_response: String @doc(description: "Adyen Payment response")
+  status: String @doc(description: "Status of order")
+}
+
+type CartResetOutput @doc(description: "Output of Cart Reset"){
+  status: String @doc(description: "Status of cart reset")
+  cart_id: String @doc(description: "masked cart id of order")
+}
+
+input CartResetInput {
+  order_id: String @doc(description: "Order ID of order")
+  cart_status: String @doc(description: "Cart Activate and deactivate")
+}
+
+input PaymentMethodOnRetryInput {
+  orderId: String @doc(description: "Order Increment ID")
+  payMethod: String @doc(description: "Payment Status")
+  brandCode: String @doc(description: "BrandCode like paypal, google pay, apple pay etc")
+}
+
+type PaymentMethodOnRetryOutput @doc(description: "Output of payment method Reset"){
+    status: String @doc(description: "Status of payment method reset")
+}
+
+type SalesOrder @doc(description: "Sales Order graphql gather Data of specific order information") {
+    increment_id: String @doc(description: "Increment Id of Sales Order")
+    customer_name: String @doc(description: "Customer Name of Sales Order")
+    customer_email: String @doc(description: "Customer Email of Sales Order")
+    order_status: String @doc(description: "Order Status of Sales Order")
+    grand_total: String @doc(description: "Grand total of Sales Order")
+    is_guest_customer : Boolean @doc(description: "Specifies if this order was placed by Guest cusotmer")
+    created_at: String @doc(description: "Creation date of Sales Order")
+    shipping_method: String @doc(description: "Shipping method of Sales Order")
+    payment_method: String @doc(description: "Payment method of Sales Order")
+    subtotal: Float @doc(description: "Subtotal of Sales Order")
+    subtotal_incl_tax: Float @doc(description: "Sub total including text of Sales Order")
+    discount_amount: Float @doc(description: "Discount Amount of Sales Order")
+    tax_amount: Float @doc(description: "Tax amount of Sales Order")
+    shipping_incl_tax: Float @doc(description: "Shipping amount with tax of Sales Order")
+    total: Float @doc(description: "Grand Total of Sales Order")
+    shipping_address: String @doc(description: "Shipping Address")
+    billing_address: String @doc(description: "Billing Address")
+    shipping_amount: String @doc(description: "Shipping Amount")
+    items: [Items] @doc(description: "An array of all items data of order") @resolver(class: "Hudson\\Payment\\Model\\Resolver\\Items")
+}
+
+type Items @doc(description: "An array containing all the items of order") {
+	sku: String @doc(description: "SKU of Sales Order Item")
+	parent_sku: String @doc(description: "SKU of Parent Product")
+    visible_in_frontend: Boolean @doc(description: "Indicates whether the product is visible in the frontend or not.")
+    title: String @doc(description: "title of Sales Order Item")
+    price: Float @doc(description: "price of Sales Order Item")
+    quantity: Float @doc(description: "Quantity of Sales Order Item")
+    special_price: Float @doc(description: "Special Price of Sales Order Item")
+    original_price: Float @doc(description: "Original Price of Sales Order Item")
+    row_total: Float @doc(description: "Row Total of Sales Order Item")
+    row_total_incl_tax: Float @doc(description: "Row Total including tax of Sales Order Item")
+    thumbnail: String @doc(description: "thumbnail of Sales Order Item")
+    color: String @doc(description: "color of Sales Order Item")
+    size: String @doc(description: "size of Order Item")
+    url_key: String @doc(description: "url key of Sales Order Item")
+}

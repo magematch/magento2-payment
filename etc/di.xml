@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Rameera_Payment
+ *
+ * @category  Rameera
+ * @package   Rameera/Payment
+ * @author    Rameera <arjundhiman90@gmail.com>
+ * @copyright 2024 Rameera
+ * @license   MIT
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="Rameera\Payment\Api\PaymentWebhookInterface" type="Rameera\Payment\Model\Api\PaymentWebhook"/>
+
+</config>

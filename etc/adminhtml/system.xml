@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Rameera_Payment
+ *
+ * @category  Rameera
+ * @package   Rameera/Payment
+ * @description Two Config field to save time threshold and retry attempt
+ * @author    Rameera <arjundhiman90@gmail.com>
+ * @copyright 2024 Rameera
+ * @license   MIT
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment" translate="label" type="text" sortOrder="400" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="payment_additional_configurations" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Payment Additional Configurations</label>
+                <field id="allowed_retry_attempts" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Allowed Payment Retry Attempts</label>
+                    <validate>required-entry validate-zero-or-greater</validate>
+                    <comment><![CDATA[Configure to restricts user's re attempt for payment.]]></comment>
+                </field>
+                <field id="allowed_threshold_to_attempt_retry" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Allowed Threshold To Retry Attempts</label>
+                    <validate>required-entry validate-zero-or-greater</validate>
+                    <comment><![CDATA[Please enter the duration (in mins) for which payment re-try window will be open.]]></comment>
+                </field>
+                <field id="pending_payment_cron_expression" translate="label" type="text" showInDefault="1">
+                    <label>Cancel Pending Payment Order Cron Expression</label>
+                    <validate>required-entry</validate>
+                    <config_path>payment/payment_additional_configurations/pending_payment_cron_expression</config_path>
+                    <comment><![CDATA[Please enter proper cron expression like 0 * * * * for very one hour.]]></comment>
+                </field>
+                <field id="pending_payment_threshold" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Pending Payment Order Threshold Before Cancellation</label>
+                    <validate>required-entry validate-zero-or-greater</validate>
+                    <comment><![CDATA[Please enter the duration (in mins).]]></comment>
+                </field>
+                <field id="save_order_comment" translate="label" type="select" sortOrder="31" showInDefault="1">
+                    <label>Save Order Comment</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

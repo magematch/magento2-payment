@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Rameera_Payment
+ *
+ * @category  Rameera
+ * @package   Rameera\Payment
+ * @author    Hudson Support <support@hudson.com>
+ * @copyright 2020 Hudson
+ * @license   https://www.hudson.com/ Private
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <payment_additional_configurations>
+                <pending_payment_threshold>5</pending_payment_threshold>
+                <pending_payment_cron_expression>0 * * * *</pending_payment_cron_expression>
+                <save_order_comment>1</save_order_comment>
+            </payment_additional_configurations>
+        </payment>
+    </default>
+</config>
