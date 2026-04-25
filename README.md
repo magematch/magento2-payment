@@ -6,7 +6,7 @@
 > Part of the [MageMatch](https://magematch.com) 
 > developer ecosystem
 
-# Rameera_Payment
+# MageMatch_Payment
 
 Magento 2 module providing payment processing, retry logic, and GraphQL integration for payment methods including Adyen.
 
@@ -34,7 +34,7 @@ Magento 2 module providing payment processing, retry logic, and GraphQL integrat
 
 ```bash
 composer require arjundhi/magento2-payment
-bin/magento module:enable Rameera_Payment
+bin/magento module:enable MageMatch_Payment
 bin/magento setup:upgrade
 bin/magento cache:flush
 ```
