@@ -2,7 +2,6 @@
   "name": "magematch/magento2-payment",
   "description": "MageMatch Payment module \u2014 payment processing, retry logic, GraphQL resolvers for Adyen and payment methods",
   "type": "magento2-module",
-  "version": "1.0.0",
   "license": "MIT",
   "authors": [
     {
@@ -18,7 +17,7 @@
   },
   "require": {
     "php": ">=8.1",
-    "magento/framework": "*"
+    "magento/framework": "^103.0"
   },
   "autoload": {
     "files": [
