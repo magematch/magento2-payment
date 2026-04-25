@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Rameera_Payment
+ * MageMatch_Payment
  *
- * @category  Rameera
- * @package   Rameera\Payment
- * @author    Hudson Support <support@hudson.com>
- * @copyright 2020 Hudson
- * @license   https://www.hudson.com/ Private
+ * @category  MageMatch
+ * @package   MageMatch\Payment
+ * @author    MageMatch <arjundhiman90@gmail.com>
+ * @copyright 2024 MageMatch
+ * @license   MIT
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">

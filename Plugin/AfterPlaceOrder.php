@@ -2,16 +2,16 @@
 declare(strict_types=1);
 
 /**
- * Rameera_Payment
+ * MageMatch_Payment
  *
- * @category  Rameera
- * @package   Rameera\Payment
- * @author    Rameera <arjundhiman90@gmail.com>
- * @copyright 2024 Rameera
+ * @category  MageMatch
+ * @package   MageMatch\Payment
+ * @author    MageMatch <arjundhiman90@gmail.com>
+ * @copyright 2024 MageMatch
  * @license   MIT
  */
 
-namespace Rameera\Payment\Plugin;
+namespace MageMatch\Payment\Plugin;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\QuoteGraphQl\Model\Resolver\PlaceOrder;

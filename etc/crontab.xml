@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="default">
-        <job name="paymentretry_cronjob_ordercancel" instance="Rameera\Payment\Cron\Ordercancel" method="execute">
+        <job name="paymentretry_cronjob_ordercancel" instance="MageMatch\Payment\Cron\Ordercancel" method="execute">
             <schedule>*/30 * * * *</schedule>
         </job>
-        <job name="cancel_pending_payment_order" instance="Rameera\Payment\Cron\CancelPendingOrder" method="execute">
+        <job name="cancel_pending_payment_order" instance="MageMatch\Payment\Cron\CancelPendingOrder" method="execute">
             <config_path>payment/payment_additional_configurations/pending_payment_cron_expression</config_path>
         </job>
     </group>

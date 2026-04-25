@@ -1,3 +1,11 @@
+# Payment for Magento 2
+
+> Free, open-source Magento 2 extension  
+> by **Arjun Dhiman** — 
+> [Adobe Commerce Certified Master](https://magematch.com/developers/arjun-dhiman)  
+> Part of the [MageMatch](https://magematch.com) 
+> developer ecosystem
+
 # Rameera_Payment
 
 Magento 2 module providing payment processing, retry logic, and GraphQL integration for payment methods including Adyen.
@@ -34,3 +42,25 @@ bin/magento cache:flush
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+## Installation
+```bash
+composer require magematch/magento2-payment
+bin/magento module:enable MageMatch_Payment
+bin/magento setup:upgrade
+bin/magento cache:clean
+```
+
+## Compatibility
+- Magento Open Source 2.4.x
+- Adobe Commerce 2.4.x
+- PHP 8.1, 8.2, 8.3
+
+## Support & Custom Development
+Need custom Magento development?  
+Find vetted Adobe Commerce developers at  
+**[magematch.com](https://magematch.com)**
+
+## License
+MIT License — free to use commercially

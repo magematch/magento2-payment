@@ -1,19 +1,19 @@
 <?xml version="1.0" ?>
 <!--
 /**
- * Rameera_Payment
+ * MageMatch_Payment
  *
- * @category  Rameera
- * @package   Rameera/Payment
+ * @category  MageMatch
+ * @package   MageMatch/Payment
  * @description Two Config field to save time threshold and retry attempt
- * @author    Rameera <arjundhiman90@gmail.com>
- * @copyright 2024 Rameera
+ * @author    MageMatch <arjundhiman90@gmail.com>
+ * @copyright 2024 MageMatch
  * @license   MIT
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Rameera_Payment">
+    <module name="MageMatch_Payment">
         <sequence>
             <module name="Magento_Payment"/>
             <module name="Magento_PaymentGraphQl"/>

@@ -1,25 +1,25 @@
 type Mutation {
     paymentRetry(input: PaymentRetryInput): PaymentRetryOutput
     @resolver(
-      class: "\\Hudson\\Payment\\Model\\Resolver\\PaymentRetry"
+      class: "\\Rameera\\Payment\\Model\\Resolver\\PaymentRetry"
     )
     @doc(description: "Payment Retry of Order")
 
     orderPayment(input: OrderPaymentInput): OrderPaymentOutput
     @resolver(
-      class: "\\Hudson\\Payment\\Model\\Resolver\\OrderPayment"
+      class: "\\Rameera\\Payment\\Model\\Resolver\\OrderPayment"
     )
     @doc(description: "Set Order Payment")
 
     cartReset(input: CartResetInput): CartResetOutput
     @resolver(
-      class: "\\Hudson\\Payment\\Model\\Resolver\\CartReset"
+      class: "\\Rameera\\Payment\\Model\\Resolver\\CartReset"
     )
     @doc(description: "Activate and Deactivate Cart")
 
     setPaymentMethodOnRetry(input: PaymentMethodOnRetryInput): PaymentMethodOnRetryOutput
     @resolver(
-      class: "\\Hudson\\Payment\\Model\\Resolver\\SetPaymentMethodOnRetry"
+      class: "\\Rameera\\Payment\\Model\\Resolver\\SetPaymentMethodOnRetry"
     )
     @doc(description: "Set Order Payment Method on Retry")
 }
@@ -27,7 +27,7 @@ type Mutation {
 type Query {
     salesOrder (
         id: String @doc(description: "Id of the Sales Order")
-    ): SalesOrder @resolver(class: "Hudson\\Payment\\Model\\Resolver\\SalesOrder") @doc(description: "The Sales Order query returns information about a Sales order")
+  ): SalesOrder @resolver(class: "Rameera\\Payment\\Model\\Resolver\\SalesOrder") @doc(description: "The Sales Order query returns information about a Sales order")
 }
 
 
@@ -94,7 +94,7 @@ type SalesOrder @doc(description: "Sales Order graphql gather Data of specific o
     shipping_address: String @doc(description: "Shipping Address")
     billing_address: String @doc(description: "Billing Address")
     shipping_amount: String @doc(description: "Shipping Amount")
-    items: [Items] @doc(description: "An array of all items data of order") @resolver(class: "Hudson\\Payment\\Model\\Resolver\\Items")
+    items: [Items] @doc(description: "An array of all items data of order") @resolver(class: "Rameera\\Payment\\Model\\Resolver\\Items")
 }
 
 type Items @doc(description: "An array containing all the items of order") {

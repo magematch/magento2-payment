@@ -2,16 +2,16 @@
 declare(strict_types=1);
 
 /**
- * Rameera_Payment
+ * MageMatch_Payment
  *
- * @category  Rameera
- * @package   Rameera\Payment
- * @author    Rameera <arjundhiman90@gmail.com>
- * @copyright 2024 Rameera
+ * @category  MageMatch
+ * @package   MageMatch\Payment
+ * @author    MageMatch <arjundhiman90@gmail.com>
+ * @copyright 2024 MageMatch
  * @license   MIT
  */
 
-namespace Rameera\Payment\Model\Api;
+namespace MageMatch\Payment\Model\Api;
 
 use Magento\Framework\Exception\CouldNotSaveException;
 use Psr\Log\LoggerInterface;
@@ -30,12 +30,12 @@ use Adyen\Webhook\Exception\HMACKeyValidationException;
 use Adyen\Webhook\Exception\InvalidDataException;
 use Adyen\Webhook\Receiver\HmacSignature;
 use Adyen\Webhook\Receiver\NotificationReceiver;
-use Rameera\Payment\Api\PaymentWebhookInterface;
+use MageMatch\Payment\Api\PaymentWebhookInterface;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Serialize\SerializerInterface;
 use Symfony\Component\Config\Definition\Exception\Exception;
-use Rameera\Payment\Model\Resolver\OrderPayment;
+use MageMatch\Payment\Model\Resolver\OrderPayment;
 
 class PaymentWebhook
 {

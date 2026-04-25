@@ -2,16 +2,16 @@
 declare(strict_types=1);
 
 /**
- * Rameera_Payment
+ * MageMatch_Payment
  *
- * @category  Rameera
- * @package   Rameera\Payment
- * @author    Rameera <arjundhiman90@gmail.com>
- * @copyright 2024 Rameera
+ * @category  MageMatch
+ * @package   MageMatch\Payment
+ * @author    MageMatch <arjundhiman90@gmail.com>
+ * @copyright 2024 MageMatch
  * @license   MIT
  */
 
-namespace Rameera\Payment\Model\Resolver;
+namespace MageMatch\Payment\Model\Resolver;
 
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -26,7 +26,7 @@ use Magento\Sales\Model\Order;
 use Magento\Sales\Api\OrderStatusHistoryRepositoryInterface;
 use Adyen\Payment\Helper\Data;
 use Psr\Log\LoggerInterface;
-use Rameera\Payment\Model\Api\PaymentWebhook;
+use MageMatch\Payment\Model\Api\PaymentWebhook;
 use Magento\Sales\Model\Order\Email\Sender\OrderSender;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\ScopeInterface;

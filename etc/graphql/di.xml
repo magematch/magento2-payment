@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
 <!--
 /**
- * Rameera_Payment
+ * MageMatch_Payment
  *
- * @category  Rameera
- * @package   Rameera/Payment
- * @author    Rameera <arjundhiman90@gmail.com>
- * @copyright 2024 Rameera
+ * @category  MageMatch
+ * @package   MageMatch/Payment
+ * @author    MageMatch <arjundhiman90@gmail.com>
+ * @copyright 2024 MageMatch
  * @license   MIT
  */
 -->
@@ -14,18 +14,18 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
     <type name="Adyen\Payment\Helper\Requests">
-        <plugin name="creditCardRequest" type="Rameera\Payment\Plugin\RequestsPlugin" sortOrder="1"/>
+        <plugin name="creditCardRequest" type="MageMatch\Payment\Plugin\RequestsPlugin" sortOrder="1"/>
     </type>
     <type name="Adyen\Payment\Helper\StateData">
-        <plugin name="stateDataPlugin" type="Rameera\Payment\Plugin\StateDataPlugin" sortOrder="1"/>
+        <plugin name="stateDataPlugin" type="MageMatch\Payment\Plugin\StateDataPlugin" sortOrder="1"/>
     </type>
 
     <type name="Adyen\Payment\Gateway\Http\Client\TransactionPayment">
-        <plugin name="adyenPaymentResponse" type="Rameera\Payment\Plugin\PaymentTransaction" sortOrder="1"/>
+        <plugin name="adyenPaymentResponse" type="MageMatch\Payment\Plugin\PaymentTransaction" sortOrder="1"/>
     </type>
 
     <type name="Magento\QuoteGraphQl\Model\Resolver\PlaceOrder">
-        <plugin name="afterPlaceOrderGraphql" type="Rameera\Payment\Plugin\AfterPlaceOrder" sortOrder="11"/>
+        <plugin name="afterPlaceOrderGraphql" type="MageMatch\Payment\Plugin\AfterPlaceOrder" sortOrder="11"/>
     </type>
 
 </config>

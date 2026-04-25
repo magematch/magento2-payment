@@ -1,27 +1,31 @@
 {
-    "name": "arjundhi/magento2-payment",
-    "description": "Rameera Payment module — payment processing, retry logic, GraphQL resolvers for Adyen and payment methods",
-    "type": "magento2-module",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Rameera",
-            "email": "arjundhiman90@gmail.com"
-        }
-    ],
-    "require": {
-        "php": "^8.1 || ^8.2 || ^8.3 || ^8.4",
-        "magento/framework": "^103.0",
-        "magento/module-payment": "^103.0",
-        "magento/module-payment-graph-ql": "^100.0",
-        "adyen/module-payment": "^8.0 || ^9.0 || ^10.0"
-    },
-    "autoload": {
-        "files": [
-            "registration.php"
-        ],
-        "psr-4": {
-            "Rameera\\Payment\\": ""
-        }
+  "name": "magematch/magento2-payment",
+  "description": "MageMatch Payment module \u2014 payment processing, retry logic, GraphQL resolvers for Adyen and payment methods",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Arjun Dhiman",
+      "email": "arjun@magematch.com",
+      "homepage": "https://magematch.com"
     }
+  ],
+  "homepage": "https://magematch.com",
+  "support": {
+    "issues": "https://github.com/magematch/magento2-payment/issues",
+    "source": "https://github.com/magematch/magento2-payment"
+  },
+  "require": {
+    "php": ">=8.1",
+    "magento/framework": "*"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "MageMatch\\Payment\\": ""
+    }
+  }
 }

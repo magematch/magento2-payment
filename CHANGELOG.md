@@ -5,7 +5,7 @@ All notable changes to `arjundhi/magento2-payment` are documented here.
 ## [1.0.0] - 2024-04-16
 
 ### Added
-- Initial release as `Rameera_Payment` (migrated from `Hudson_Payment`)
+- Initial release as `Rameera_Payment` with standardized module identity.
 - Payment webhook API and processing
 - Payment retry resolver with configurable timeout and attempts
 - Cart reset and order payment GraphQL resolvers

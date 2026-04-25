@@ -1,6 +1,6 @@
 <?php
 
-namespace Rameera\Payment\Cron;
+namespace MageMatch\Payment\Cron;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\Exception\CouldNotSaveException;

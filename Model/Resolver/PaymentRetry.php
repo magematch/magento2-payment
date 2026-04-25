@@ -2,16 +2,16 @@
 declare(strict_types=1);
 
 /**
- * Rameera_Payment
+ * MageMatch_Payment
  *
- * @category  Rameera
- * @package   Rameera\Payment
- * @author    Rameera <arjundhiman90@gmail.com>
- * @copyright 2024 Rameera
+ * @category  MageMatch
+ * @package   MageMatch\Payment
+ * @author    MageMatch <arjundhiman90@gmail.com>
+ * @copyright 2024 MageMatch
  * @license   MIT
  */
 
-namespace Rameera\Payment\Model\Resolver;
+namespace MageMatch\Payment\Model\Resolver;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
