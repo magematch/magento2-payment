@@ -33,7 +33,7 @@ Magento 2 module providing payment processing, retry logic, and GraphQL integrat
 ## Installation
 
 ```bash
-composer require arjundhi/magento2-payment
+composer require magematch/magento2-payment
 bin/magento module:enable MageMatch_Payment
 bin/magento setup:upgrade
 bin/magento cache:flush

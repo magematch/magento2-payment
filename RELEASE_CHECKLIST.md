@@ -1,4 +1,4 @@
-# Release Checklist — arjundhi/magento2-payment
+# Release Checklist — magematch/magento2-payment
 
 ## Pre-release
 - [ ] All PHP files pass `php -l` (no syntax errors)

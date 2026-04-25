@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `arjundhi/magento2-payment` are documented here.
+All notable changes to `magematch/magento2-payment` are documented here.
 
 ## [1.0.0] - 2024-04-16
 
