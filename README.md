@@ -6,8 +6,6 @@
 > Part of the [MageMatch](https://magematch.com) 
 > developer ecosystem
 
-# MageMatch_Payment
-
 Magento 2 module providing payment processing, retry logic, and GraphQL integration for payment methods including Adyen.
 
 ## Features
@@ -29,19 +27,6 @@ Magento 2 module providing payment processing, retry logic, and GraphQL integrat
 | `magento/module-payment` | `^103.0` |
 | `magento/module-payment-graph-ql` | `^100.0` |
 | `adyen/module-payment` | `*` |
-
-## Installation
-
-```bash
-composer require magematch/magento2-payment
-bin/magento module:enable MageMatch_Payment
-bin/magento setup:upgrade
-bin/magento cache:flush
-```
-
-## License
-
-MIT — see [LICENSE](LICENSE).
 
 ---
 ## Installation
